@@ -252,13 +252,13 @@ html.reveal-full-page {
 	30% {transform: translateY(-5px);}
 }
 
-$controlArrowSize: 3.6em;
+$controlArrowSize: 11.6em;
 $controlArrowSpacing: 1.4em;
-$controlArrowLength: 2.6em;
-$controlArrowThickness: 0.5em;
-$controlsArrowAngle: 45deg;
+$controlArrowLength: 6.6em;
+$controlArrowThickness: 1.8em;
+$controlsArrowAngle: 50deg;
 $controlsArrowAngleHover: 40deg;
-$controlsArrowAngleActive: 36deg;
+$controlsArrowAngleActive: 30deg;
 
 @mixin controlsArrowTransform( $angle ) {
 	&:before {
