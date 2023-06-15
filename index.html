@@ -16,8 +16,27 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
+				<section data-background-iframe="start.html"
+						data-background-interactive>
+				</section>
+				<section>
+					<section id="nhr_video", data-background-video="nhr_video.mp4" 
+							data-background-video-loop>
+					</section>
+					<section id="cn_rundgang", data-background-iframe="https://www.zml.kit.edu/campus360/SCC/SCCStandorte/rundgang.html"
+							data-background-interactive>
+					</section>
+					<section id="cs_rundgang", data-background-iframe="https://www.zml.kit.edu/campus360/SCC/Studierende/rundgang.html"
+							data-background-interactive>
+					</section>
+					<section id="hpc_tour", data-background-iframe="https://www.scc.kit.edu/scc/scs/hpc-tour/index.html#/welcome"
+							data-background-interactive>
+					</section>
+					<section id="tdot_ws", data-background-iframe="https://www.kit.edu/kit/tag-der-offenen-tuer.php"
+							data-background-interactive>
+					</section>
+				</section>
+
 			</div>
 		</div>
 
@@ -31,7 +50,12 @@
 			// - https://revealjs.com/config/
 			Reveal.initialize({
 				hash: true,
-
+				touch: true,
+				autoPlayMedia: true,
+				progress: false,
+				controlsLayout: 'edges',
+				preloadIframes: true,
+				transition: 'zoom',
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
