@@ -23,6 +23,9 @@
 					<section id="nhr_video", data-background-video="nhr_video.mp4" 
 							data-background-video-loop>
 					</section>
+					<section id="horeka_video", data-background-video="horeka_video.mp4" 
+							data-background-video-loop>
+					</section>
 					<section id="cn_rundgang", data-background-iframe="https://www.zml.kit.edu/campus360/SCC/SCCStandorte/rundgang.html"
 							data-background-interactive>
 					</section>
@@ -30,6 +33,9 @@
 							data-background-interactive>
 					</section>
 					<section id="hpc_tour", data-background-iframe="https://www.scc.kit.edu/scc/scs/hpc-tour/index.html#/welcome"
+							data-background-interactive>
+					</section>
+					<section id="quantum_tour", data-background-iframe="quantum.html"
 							data-background-interactive>
 					</section>
 					<section id="tdot_ws", data-background-iframe="https://www.kit.edu/kit/tag-der-offenen-tuer.php"
@@ -51,10 +57,11 @@
 			Reveal.initialize({
 				hash: true,
 				touch: true,
+				center: false,
 				autoPlayMedia: true,
 				progress: false,
 				controlsLayout: 'edges',
-				preloadIframes: true,
+				// preloadIframes: true,
 				transition: 'zoom',
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
