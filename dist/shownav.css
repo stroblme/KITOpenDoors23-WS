@@ -1,0 +1,11 @@
+.controls 
+	.navigate-left
+		.controls-arrow {
+			visibility:visible
+		}
+	.navigate-up,
+	.navigate-down,
+	.navigate-right,
+		.controls-arrow {
+			visibility:hidden
+		}

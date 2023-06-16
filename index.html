@@ -10,35 +10,37 @@
 		<link rel="stylesheet" href="dist/reveal.css">
 		<link rel="stylesheet" href="dist/theme/black.css">
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
+		<link rel="stylesheet" href="dist/shownav.css">
 	</head>
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-background-iframe="start.html"
+				<section id="start_de", data-state="hidenav", data-background-iframe="start_de.html",
+						data-background-interactive>
+				</section>
+				<section id="start_en", data-state="hidenav", data-background-iframe="start_en.html"
 						data-background-interactive>
 				</section>
 				<section>
-					<section id="nhr_video", data-background-video="nhr_video.mp4" 
+					<section id="nhr_video", data-state="shownav", data-background-video="nhr_video.mp4" 
 							data-background-video-loop>
 					</section>
-					<section id="horeka_video", data-background-video="horeka_video.mp4" 
+					<section id="horeka_video", data-state="shownav", data-background-video="horeka_video.mp4" 
 							data-background-video-loop>
 					</section>
-					<section id="cn_rundgang", data-background-iframe="https://www.zml.kit.edu/campus360/SCC/SCCStandorte/rundgang.html"
+					<section id="cn_rundgang", data-state="shownav", data-background-iframe="https://www.zml.kit.edu/campus360/SCC/SCCStandorte/rundgang.html"
 							data-background-interactive>
 					</section>
-					<section id="cs_rundgang", data-background-iframe="https://www.zml.kit.edu/campus360/SCC/Studierende/rundgang.html"
+					<section id="cs_rundgang", data-state="shownav", data-background-iframe="https://www.zml.kit.edu/campus360/SCC/Studierende/rundgang.html"
 							data-background-interactive>
 					</section>
-					<section id="hpc_tour", data-background-iframe="https://www.scc.kit.edu/scc/scs/hpc-tour/index.html#/welcome"
+					<section id="hpc_tour", data-state="shownav", data-background-iframe="https://www.scc.kit.edu/scc/scs/hpc-tour/index.html#/welcome"
 							data-background-interactive>
 					</section>
-					<section id="quantum_tour", data-background-iframe="quantum.html"
+					<section id="quantum_tour", data-state="shownav", data-background-iframe="quantum.html"
 							data-background-interactive>
 					</section>
-					<section id="tdot_ws", data-background-iframe="https://www.kit.edu/kit/tag-der-offenen-tuer.php"
+					<section id="tdot_ws", data-state="shownav", data-background-iframe="https://www.kit.edu/kit/tag-der-offenen-tuer.php"
 							data-background-interactive>
 					</section>
 				</section>
@@ -66,6 +68,14 @@
 				// Learn about plugins: https://revealjs.com/plugins/
 				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
 			});
+
+			Reveal.addEventListener( 'hidenav', function() {
+				document.querySelectorAll('[rel="stylesheet"]')[3].setAttribute('href', 'dist/hidenav.css');
+			}, false );
+
+			Reveal.addEventListener( 'shownav', function() {
+				document.querySelectorAll('[rel="stylesheet"]')[3].setAttribute('href', 'dist/shownav.css');
+			}, false );
 		</script>
 	</body>
 </html>
