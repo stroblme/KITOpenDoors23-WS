@@ -9,3 +9,12 @@
 		.controls-arrow {
 			visibility:hidden
 		}
+	.navigate-down{
+		display: none;
+	}
+	.navigate-up{
+		display: none;
+	}
+	.navigate-right{
+		display: none;
+	}
